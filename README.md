@@ -1,40 +1,38 @@
-# House Price Data Analysis — Python Project
+# Employee Performance & Salary Analysis — SQL Project
 
-## Situation
-As a data analyst for a real estate agency, I was given a housing dataset and asked to 
-identify trends that could inform business decisions, with a focus on understanding what 
-factors influence house prices.
+*This project is based on a hypothetical business scenario used as a coursework assignment — 
+ScienceQtech is not a real company, and I was not an actual employee or Database 
+Administrator there. The scenario provided the business context for practicing SQL skills 
+against a sample employee dataset.*
+
+## Scenario
+The assignment imagines ScienceQtech, a startup working across several data science domains 
+(fraud detection, market basket analysis, self-driving cars, supply chain, early cancer 
+detection, customer sentiment, and drug discovery). With an annual appraisal cycle 
+approaching, the (fictional) HR department needed reports on employee details, performance, 
+and project involvement to support performance mapping decisions.
 
 ## Task
-Analyze the dataset to understand pricing patterns, evaluate the relationship between 
-home size and price, flag potential data quality issues, and demonstrate a full data 
-pipeline from raw data to structured storage.
+Acting in the role of a Database Administrator for this scenario, I was asked to:
+- Find the maximum salary of employees across roles
+- Ensure job profiles meet the organization's standards based on experience
+- Calculate performance-based bonuses to estimate additional costs
+- Support HR's understanding of employee performance and training needs
 
 ## What I Did
-Cleaned and analyzed a residential housing dataset in Python, using pandas for data 
-transformation and Plotly for interactive visualizations to examine price distribution and 
-the relationship between living space and price, flagging likely data-entry errors along 
-the way. Persisted the cleaned data into a SQLite database to demonstrate a full 
-pandas-to-SQL pipeline.
-
-## Key Findings
-- House prices are heavily right-skewed, with most homes priced between $300K–$650K and 
-  a median around $461K.
-- A small number of high-end outliers (47 homes above $2M) compress the distribution and 
-  make it harder to read.
-- 49 records showed a price of $0, likely data entry errors rather than real listings.
-- Living space shows a general positive relationship with price, but it's loose rather 
-  than tight — homes of similar size often sell for very different prices.
-- Two extreme outliers (a $26.6M home at 1,180 sqft, and a $12.9M home at 2,190 sqft) were 
-  flagged as likely data errors rather than legitimate high-value sales.
+Queried a relational employee database to support a simulated HR performance review 
+process, using window functions, a custom stored function, and views to segment employees 
+by rating and department, calculate bonuses, rank employees by experience, and validate job 
+titles against organizational standards.
 
 ## Key Skills / Technologies
-- Python (pandas, Plotly)
-- Data cleaning & transformation
-- Exploratory data analysis (EDA)
-- Data visualization (histograms, scatter plots)
-- SQLite (`sqlite3`)
-- Outlier detection
+- SQL (MySQL)
+- Window functions (`OVER`, `PARTITION BY`)
+- Stored functions
+- Views
+- `CASE` statements
+- Aggregate functions (`MIN`, `MAX`, `AVG`)
+- `UNION`, `GROUP BY`
 
 ## Files
-- `Real_Estate_Data_Analysis.ipynb` — full notebook with code and analysis
+- `Employee_Performance_Mapping.sql` — all queries used in the analysis
